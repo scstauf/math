@@ -28,10 +28,10 @@ def make_array(size, max):
 # sum(123) = 6
 # sum(234) = 9
 #
-# n	=>	i			=	s	...	c
-# 1 =>	0			=	0	... 0
-# 2 =>	01			=	1	... 1
-# 3 =>	012			=	3	...	2
+# n =>	i		=	s	...	c
+# 1 =>	0		=	0	... 	0
+# 2 =>	01		=	1	... 	1
+# 3 =>	012		=	3	...	2
 # 4 =>	0123		=	6	...	3
 # 5 =>	01234		=	10	...	4
 # 6 =>	012345		=	15	...	5
@@ -39,7 +39,7 @@ def make_array(size, max):
 # 8 =>	01234567	=	28	...	7
 # 9 =>	012345678	=	36	...	8
 #
-# n = sequence, i = number, s = sum, c = change in initial value from last sum
+# n = sequence, i = number, s = init sum, c = change in initial value from last sum
 
 def test():
 	stop = 10
