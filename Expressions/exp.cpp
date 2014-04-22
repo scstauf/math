@@ -4,11 +4,14 @@
  *	This small program parses and evaluates "complex" mathematical expressions.
  *
  *	(1 + 2 * (3 + 4) / 5) => 4.2
+ * 	(1 + (2 * (3 + 4)) / (5 + 4)) => 1.66667
  *
  *	NOTE:
  *			This algorithm does NOT check for division by zero
  *			because I wrote it in approximately two hours and I have 
  *			to work in the morning.
+ * 
+ * 			This algorithm also does NOT implement order of operations.
  *
  *	scottyeatscode.net
  *	github.com/scstauf
