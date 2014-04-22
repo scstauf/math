@@ -35,6 +35,7 @@ string&		replace(string&, string, string);
 
 string		get_innermost(string);
 double		handle_segments(string);
+string		enforce_spacing(string);
 
 int main() {
 	string input("");
@@ -42,7 +43,7 @@ int main() {
 	cout << "expression: ";
 	getline(cin, input, '\n');
 	
-	cout << "value: " << handle_segments(input) << endl;
+	cout << "value: " << handle_segments(enforce_spacing(input)) << endl;
 }
 
 double parse(string input) {
@@ -228,4 +229,26 @@ double handle_segments(string input) {
 	return result;
 }
 
+string enforce_spacing(string input) {
+	string output("");
+	char c = '\0';
+	for (unsigned int i = 0; i < input.length(); i++) {
+		c = input[i];
+		switch (c) {
+			case ' ': case '\t': break;
+			
+			case '(':
+				output.push_back(c);
+				break;
+			
+			default:
+				output.push_back(c);
+				if (i < input.length() && input[i + 1] != ')') {
+					output.push_back(' ');
+				}
+				break;
+		}
+	}
 
+	return output;
+}
