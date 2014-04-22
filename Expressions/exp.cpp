@@ -134,38 +134,38 @@ string dtos(double d) {
 }
 
 bool is_numeric(string s) {
-    bool numeric = true;
-    int decimals = 0;
+	bool numeric = true;
+	int decimals = 0;
 	for (unsigned int i = 0; i < s.length(); i++) {
-        if (!isdigit(s[i])) {
-            if (s[i] == '.' && decimals < 1) {
-                decimals++;
-                continue;
-            }
-            else if (s[i] == '-') {
-                if (i != 0) {
-                    numeric = false;
-                    break;
-                }
-                else {
-                    continue;
-                }
-            }
+		if (!isdigit(s[i])) {
+			if (s[i] == '.' && decimals < 1) {
+				decimals++;
+				continue;
+			}
+			else if (s[i] == '-') {
+				if (i != 0) {
+					numeric = false;
+					break;
+				}
+				else {
+					continue;
+				}
+			}
 			numeric = false;
-            break;
-        }
+			break;
+		}
 	}
 	
 	return numeric;
 }
 
 string &replace(string &subj, string old, string repl) {
-    size_t pos = subj.find(old);
-    if (pos != string::npos) {
-       subj.erase(pos, old.size());
-       subj.insert(pos, repl);
-    }
-    return subj;
+	size_t pos = subj.find(old);
+	if (pos != string::npos) {
+		subj.erase(pos, old.size());
+		subj.insert(pos, repl);
+	}
+	return subj;
 }
 
 bool contains_open_parenthesis(string initial) {
