@@ -4,7 +4,7 @@
  * Pythagoras found it first. It's called the triangular
  * number sequence. I demonstrate another algorithm for
  * generating the sequence in python. This one is C++
- * and for more robust. It beats all constraints in the
+ * and far more robust. It beats all constraints in the
  * python algorithm.
  */
 
