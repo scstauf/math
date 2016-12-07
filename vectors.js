@@ -11,7 +11,7 @@ var Trig = {
 			'vector b = ' + b1 + 'i' + (b2 > 0 ? '+' : '-') + Math.abs(b2) + 'j' + '\r\n' +
 			'dot product a * b = ' + dotProduct + '\r\n' +
 			'angle between: radians: ' + angleBetweenRad + ', degrees: ' + angleBetweenDeg + '\r\n' +
-			'rounded to ' + dec + ' decimal place(s): radians: ' + angleBetweenRad.toFixed(round) + ', degrees: ' + angleBetweenDeg.toFixed(round) + '\r\n'
+			'rounded to ' + round + ' decimal place(s): radians: ' + angleBetweenRad.toFixed(round) + ', degrees: ' + angleBetweenDeg.toFixed(round) + '\r\n'
 		);
 		
 		return {
