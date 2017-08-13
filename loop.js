@@ -45,7 +45,7 @@ var Loop = (function () {
             steps = Math.abs(this._steps || 1),
             items = this._items || [];
             
-        if (!callback || typeof callback !== 'function') {
+        if (!(callback || typeof callback === 'function')) {
             return this.reset();
         }
         
