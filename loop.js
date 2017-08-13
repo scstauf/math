@@ -45,36 +45,36 @@ var Loop = (function () {
             steps = Math.abs(this._steps || 1),
             items = this._items || [];
             
-        if (typeof callback === 'function') {
-            if (this._forEach && items && typeof items === 'object') {
-                if (Array.isArray(items)) {
-                    for (var item in items) {
-                        callback(i++, items[item]);
-                    }
-                }
-                else {
-                    for (var item in items) {
-                        callback(item, items[item]);
-                    }
+        if (!callback || typeof callback !== 'function') {
+            return this.reset();
+        }
+        
+        if (this._forEach && items && typeof items === 'object') {
+            if (Array.isArray(items)) {
+                for (var item in items) {
+                    callback(i++, items[item]);
                 }
             }
             else {
-                if (start < stop) {
-                    for (i = start; i <= stop; i += steps) {
-                        callback(i);
-                    }
+                for (var item in items) {
+                    callback(item, items[item]);
                 }
-                else {
-                    for (var i = start; i >= stop; i -= steps) {
-                        callback(i);
-                    }
+            }
+        }
+        else {
+            if (start < stop) {
+                for (i = start; i <= stop; i += steps) {
+                    callback(i);
+                }
+            }
+            else {
+                for (var i = start; i >= stop; i -= steps) {
+                    callback(i);
                 }
             }
         }
         
-        this.reset();
-        
-        return this;
+        return this.reset();
     };
 
     return _Loop;
