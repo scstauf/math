@@ -34,6 +34,6 @@ function lookAndSay(ns) {
     return seq;
 }
 
-for (var i = 0, s = '1'; i < 50; i++) {
+for (var i = 0, s = '1'; i < 10; i++) {
     s = lookAndSay(s);
 }
