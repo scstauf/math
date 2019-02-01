@@ -37,3 +37,54 @@ printTable(LogicGate.and);
 printTable(LogicGate.nand);
 printTable(LogicGate.nor);
 printTable(LogicGate.xnor);
+
+/*
+>node logic.js
+logic gate: xor
+in      in      out
+--------------------------
+false   false   false
+true    false   true
+false   true    true
+true    true    false
+
+logic gate: or
+in      in      out
+--------------------------
+false   false   false
+true    false   true
+false   true    true
+true    true    true
+
+logic gate: and
+in      in      out
+--------------------------
+false   false   false
+true    false   false
+false   true    false
+true    true    true
+
+logic gate: nand
+in      in      out
+--------------------------
+false   false   true
+true    false   true
+false   true    true
+true    true    false
+
+logic gate: nor
+in      in      out
+--------------------------
+false   false   true
+true    false   false
+false   true    false
+true    true    false
+
+logic gate: xnor
+in      in      out
+--------------------------
+false   false   true
+true    false   false
+false   true    false
+true    true    true
+*/
