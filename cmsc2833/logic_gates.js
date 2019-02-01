@@ -39,7 +39,7 @@ printTable(LogicGate.nor);
 printTable(LogicGate.xnor);
 
 /*
->node logic.js
+>node logic_gates.js
 logic gate: xor
 in      in      out
 --------------------------
